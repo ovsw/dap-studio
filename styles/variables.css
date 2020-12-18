@@ -1,0 +1,28 @@
+/* ./styles/variables.css */
+
+/* @import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap'); */
+
+:root {
+  /* Brand colors */
+  --body-bg: #FFFDF5;
+  /*--body-text: #fff;
+  --component-text-color: #fff; */
+  /* --component-bg: #FF0000; */
+  --main-navigation-color: #2E8564;
+
+  --brand-primary: #2E8564;
+  --brand-primary--inverted: #3EB084;
+  --brand-secondary: #057EA6;
+  --brand-secondary--inverted: #13CEEB;
+
+  /* Typography */
+  /* --font-family-sans-serif: 'Space Mono'; */
+  --font-size-base: 16px;
+  /* --text-color: var(--brand-primary--inverted); */
+  --text-color: rgb(88, 88, 88);
+
+  --header-height: 3.3rem;
+
+
+
+}
