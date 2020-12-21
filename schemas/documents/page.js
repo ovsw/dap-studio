@@ -75,7 +75,8 @@ export default {
           of: [
             {type: 'magSection'},
             {type: 'ctaSection'},
-            {type: 'bigHeading'}
+            {type: 'bigHeading'},
+            {type: 'tableSection'}
           ]
         },
         {

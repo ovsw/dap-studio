@@ -28,6 +28,7 @@ import youtube from './objects/youtube'
 import ctaSection from './objects/sections/cta'
 import bigHeading from './objects/sections/bigHeading'
 import magSection from './objects/sections/magazine'
+import tableSection from './objects/sections/table'
 
 // Common Tabs
 import seo from './tabs/seo'
@@ -56,6 +57,7 @@ export default createSchema({
     ctaSection,
     bigHeading,
     magSection,
+    tableSection,
     // tabs 
     seo,
     // documents
