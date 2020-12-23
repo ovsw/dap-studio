@@ -76,7 +76,9 @@ export default {
             {type: 'magSection'},
             {type: 'ctaSection'},
             {type: 'bigHeading'},
-            {type: 'tableSection'}
+            {type: 'tableSection'},
+            {type: 'faqSection'},
+            {type: 'cardSection'}
           ]
         },
         {

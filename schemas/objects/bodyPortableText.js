@@ -88,12 +88,6 @@ export default {
     // },
     {
       type: 'iframeEmbed'
-    },
-    {
-      type: 'faqs'
-    },
-    {
-      type: 'ctaSection'
     }
   ]
 }

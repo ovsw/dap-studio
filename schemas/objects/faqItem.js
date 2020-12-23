@@ -1,7 +1,11 @@
+
+import {FaQuestionCircle} from 'react-icons/fa'
+
 export default {
   name: 'faqItem',
   type: 'object',
   title: 'Question and Answer',
+  icon: FaQuestionCircle,
   fields: [
     {
       name: 'question',

@@ -59,7 +59,7 @@ export default {
   ],
   preview: {
     select: {
-      title: 'button1.text',
+      title: 'title',
       theme: 'theme'
     },
     prepare ({ title, theme }) {

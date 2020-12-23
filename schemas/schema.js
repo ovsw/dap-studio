@@ -16,6 +16,7 @@ import barePortableText from './objects/barePortableText'
 import bgImage from './objects/bgImage'
 import bodyPortableText from './objects/bodyPortableText'
 import button from './objects/button'
+import card from './objects/card'
 import iframeEmbed from './objects/iframeEmbed'
 import faqItem from './objects/faqItem'
 import faqs from './objects/faqs'
@@ -25,8 +26,10 @@ import simplePortableText from './objects/simplePortableText'
 import youtube from './objects/youtube'
 
 // sections
+import cardSection from './objects/sections/cardSection'
 import ctaSection from './objects/sections/cta'
 import bigHeading from './objects/sections/bigHeading'
+import faqSection from './objects/sections/faqSection'
 import magSection from './objects/sections/magazine'
 import tableSection from './objects/sections/table'
 
@@ -46,6 +49,7 @@ export default createSchema({
     bodyPortableText,
     bgImage,
     button,
+    card,
     iframeEmbed,
     faqItem,
     faqs,
@@ -54,8 +58,10 @@ export default createSchema({
     simplePortableText,
     youtube,
     // sections
+    cardSection,
     ctaSection,
     bigHeading,
+    faqSection,
     magSection,
     tableSection,
     // tabs 
