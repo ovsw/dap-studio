@@ -9,6 +9,12 @@ export default {
   icon: FaQuestionCircle,
   fields: [
     {
+      name: 'title',
+      type: 'string',
+      title: 'Section Title',
+      validation: Rule => Rule.error('Missing FAQs section title').required(),
+    },
+    {
       name: 'faqItems',
       title: 'Questions and Answers:',
       description: 'Note: you can also create headings and drag-and drop them where needed to break up a big list of FAQs.',
