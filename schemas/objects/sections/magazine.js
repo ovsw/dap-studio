@@ -48,6 +48,12 @@ export default {
       validation: Rule => Rule.error('Select a color theme.').required()
     },
     {
+      name: 'eyebrow',
+      type: 'string',
+      title: 'Eyebrow',
+      description: 'optional short colored text appearing just above the Section Title',
+    },
+    {
       name: 'title',
       type: 'string',
       title: 'Section Title (required)',
