@@ -10,12 +10,14 @@ export default {
     {
       name: 'question',
       type: 'string',
-      title: 'Question'
+      title: 'Question',
+      validation: Rule => Rule.error('Empty FAQ question.').required()
     },
     {
       name: 'answer',
       type: 'simplePortableText',
-      title: 'Answer'
+      title: 'Answer',
+      validation: Rule => Rule.error('Empty FAQ answer.').required()
     },
   ],
   preview: {
