@@ -28,6 +28,12 @@ export default {
       validation: Rule => Rule.error('missing card title').required(),
     },
     {
+      name: 'subTitle',
+      title: 'Subtitle',
+      type: 'string',
+      description: 'optional subtitle',
+    },
+    {
       name: 'text',
       title: 'Button',
       type: 'simplePortableText',
