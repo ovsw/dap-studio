@@ -20,7 +20,10 @@ import card from './objects/card'
 import iframeEmbed from './objects/iframeEmbed'
 import faqItem from './objects/faqItem'
 import faqs from './objects/faqs'
+import hero from './objects/hero'
 import mainImage from './objects/mainImage'
+import menuItem from './objects/menuItem'
+import menuItemPrice from './objects/menuItemPrice'
 import pageStatus from './objects/pageStatus'
 import simplePortableText from './objects/simplePortableText'
 import youtube from './objects/youtube'
@@ -31,6 +34,7 @@ import ctaSection from './objects/sections/cta'
 import bigHeading from './objects/sections/bigHeading'
 import faqSection from './objects/sections/faqSection'
 import magSection from './objects/sections/magazine'
+import menuSection from './objects/sections/menuSection'
 import tableSection from './objects/sections/table'
 
 // Common Tabs
@@ -53,16 +57,20 @@ export default createSchema({
     iframeEmbed,
     faqItem,
     faqs,
+    hero,
     mainImage,
     pageStatus,
     simplePortableText,
     youtube,
+    menuItem,
+    menuItemPrice,
     // sections
     cardSection,
     ctaSection,
     bigHeading,
     faqSection,
     magSection,
+    menuSection,
     tableSection,
     // tabs 
     seo,

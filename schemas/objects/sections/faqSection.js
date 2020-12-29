@@ -26,6 +26,7 @@ export default {
               title: 'FAQ Category Heading',
               icon: FaHeading,
               type: 'object',
+              validation: Rule => Rule.error('Missing FAQ Category Title.').required(),
               fields: [
                 {
                   title: 'Category Title',

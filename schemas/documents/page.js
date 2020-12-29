@@ -78,7 +78,8 @@ export default {
             {type: 'bigHeading'},
             {type: 'tableSection'},
             {type: 'faqSection'},
-            {type: 'cardSection'}
+            {type: 'cardSection'},
+            {type: 'menuSection'}
           ]
         },
         {

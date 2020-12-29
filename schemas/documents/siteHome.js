@@ -13,17 +13,30 @@ export default {
       title: 'Content',
       inputComponent: Tabs,
       fieldsets: [
+        {name: 'hero', title: 'Hero'},
         {name: 'main', title: 'Main'},
         {name: 'seo', title: 'SEO'}
       ],
       fields: [
         {
+          fieldset: 'hero',
+          name: 'hero',
+          title: 'Hero',
+          type: 'hero'
+        },
+        {
           fieldset: 'main',
           name: 'sections',
+          title: 'Homepage Content Sections',
           type: 'array',
           of: [
             {type: 'magSection'},
-            {type: 'ctaSection'}
+            {type: 'ctaSection'},
+            {type: 'bigHeading'},
+            {type: 'tableSection'},
+            {type: 'faqSection'},
+            {type: 'cardSection'},
+            {type: 'menuSection'}
           ]
         },
         {

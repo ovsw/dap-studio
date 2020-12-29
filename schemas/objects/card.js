@@ -35,7 +35,7 @@ export default {
     },
     {
       name: 'text',
-      title: 'Button',
+      title: 'Card Body Content',
       type: 'simplePortableText',
       description: 'card contents',
       validation: Rule => Rule.error('missing card content').required(),

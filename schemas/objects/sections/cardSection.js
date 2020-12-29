@@ -21,6 +21,11 @@ export default {
           of: [
             {type: 'card'}
           ]
+    },
+    {
+      name: 'image',
+      type: 'bgImage',
+      title: 'Optional image background'
     }
   ],
   preview: {
