@@ -1,13 +1,14 @@
 import S from '@sanity/desk-tool/structure-builder'
 import { MdSettings, MdHome } from "react-icons/md";
 import { FaRegNewspaper, FaRegStar, FaFile} from "react-icons/fa";
+import {ImSection} from 'react-icons/im'
 
 import {pagesByStatusCopy} from "./structure/pagesByStatusCopy"
 import {pagesByStatusImage} from "./structure/pagesByStatusImage"
 import {pagesByStatusImages} from "./structure/pagesByStatusImages"
 
 const hiddenDocTypes = listItem =>
-  !['siteSettings', 'newsItem', 'attraction', 'page'].includes(listItem.getId())
+  !['siteSettings', 'newsItem', 'attraction', 'page', 'reusableSection'].includes(listItem.getId())
 
 export default () =>
   S.list()
@@ -46,6 +47,11 @@ export default () =>
         .schemaType('page')
         .icon(FaFile)
         .child(S.documentTypeList('page').title('Pages')),
+      S.listItem()
+        .title('Reusable Sections')
+        .icon(ImSection)
+        .schemaType('reusableSection')
+        .child(S.documentTypeList('reusableSection').title('Reusable Sections')),
       S.listItem()
         .title('Pages by Content Status')
         .child(

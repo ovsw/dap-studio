@@ -7,6 +7,7 @@ import schemaTypes from 'all:part:@sanity/base/schema-type'
 // document schemas
 import newsItem from './documents/newsItem'
 import page from './documents/page'
+import reusableSection from './documents/reusableSection'
 import attraction from './documents/attraction'
 import siteHome from './documents/siteHome'
 import siteSettings from './documents/siteSettings'
@@ -35,6 +36,7 @@ import bigHeading from './objects/sections/bigHeading'
 import faqSection from './objects/sections/faqSection'
 import magSection from './objects/sections/magazine'
 import menuSection from './objects/sections/menuSection'
+import reusedSection from './objects/sections/reusedSection'
 import tableSection from './objects/sections/table'
 
 // Common Tabs
@@ -71,6 +73,7 @@ export default createSchema({
     faqSection,
     magSection,
     menuSection,
+    reusedSection,
     tableSection,
     // tabs 
     seo,
@@ -78,6 +81,7 @@ export default createSchema({
     attraction,
     newsItem,
     page,
+    reusableSection,
     siteHome,
     siteSettings
   ])
