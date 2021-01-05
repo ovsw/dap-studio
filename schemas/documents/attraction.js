@@ -45,10 +45,10 @@ export default {
           description: 'used to differentiate between different attraction categories',
           options: {
             list: [
-              {title: 'Amusement Park - Kiddie Ride', value: 'Amusement Park - Kiddie Ride'},
-              {title: 'Amusement Park - Family Ride', value: 'Amusement Park - Family Ride'},
-              {title: 'Amusement Park - Thrill Ride', value: 'Amusement Park - Thrill Ride'},
-              {title: 'Water Park', value: 'Water Park Attraction'}
+              {title: 'Amusement Park - Kiddie Ride', value: 'Amusement Park|Kiddie Ride'},
+              {title: 'Amusement Park - Family Ride', value: 'Amusement Park|Family Ride'},
+              {title: 'Amusement Park - Thrill Ride', value: 'Amusement Park|Thrill Ride'},
+              {title: 'Water Park', value: 'Water Park'}
             ],
             layout: 'radio' // <-- defaults to 'dropdown'
           },
@@ -69,12 +69,9 @@ export default {
         {
           fieldset: 'settings',
           name: 'mainImage',
-          type: 'image',
+          type: 'bgImage',
           title: 'Cover Image',
-          description: 'shown as a header background for the ride\'s page',
-          options: {
-            hotspot: true
-          },
+          description: 'shown in the listing, and as a header background for the ride',
           validation: Rule => Rule.required().error('missing image')
         },
         {
