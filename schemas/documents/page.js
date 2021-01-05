@@ -79,7 +79,8 @@ export default {
             {type: 'tableSection'},
             {type: 'faqSection'},
             {type: 'cardSection'},
-            {type: 'menuSection'}
+            {type: 'menuSection'},
+            {type: 'reusedSection'}
           ]
         },
         {
