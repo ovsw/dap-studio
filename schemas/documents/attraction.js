@@ -76,9 +76,19 @@ export default {
         },
         {
           fieldset: 'main',
-          name: 'body',
-          title: 'Body',
-          type: 'bodyPortableText'
+          name: 'sections',
+          title: 'Content Sections',
+          type: 'array',
+          of: [
+            {type: 'magSection'},
+            {type: 'ctaSection'},
+            {type: 'bigHeading'},
+            {type: 'tableSection'},
+            {type: 'faqSection'},
+            {type: 'cardSection'},
+            {type: 'menuSection'},
+            {type: 'reusedSection'}
+          ]
         },
         {
           fieldset: 'seo',
@@ -111,9 +121,11 @@ export default {
     },
     prepare ({title = 'No title', slug = {}, image, category}) {
       const path = `/${slug.current}/`
+      const attractionCategories = category.split("|")
+
       return {
         title,
-        subtitle: category,
+        subtitle: `${attractionCategories[0]} - ${attractionCategories[1]}`,
         media: image
       }
     }
