@@ -12,7 +12,8 @@ export default {
           {title: '1. Needs copy (empty)', value: 'empty'},
           {title: '2. Needs update (old content)', value: 'to update'},
           {title: '3. Needs approval', value: 'to approve'},
-          {title: '4. Approved', value: 'approved'}
+          {title: '4. Approved', value: 'approved'},
+          {title: '5. Final', value: 'final'}
         ]
       },
       validation: Rule => Rule.required().error('missing location')

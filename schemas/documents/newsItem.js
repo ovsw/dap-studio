@@ -55,10 +55,11 @@ export default {
           options: {
             layout: 'tags',
             list: [
-              {title: 'Event', value: 'event'},
               {title: 'Food', value: 'food'},
               {title: 'Park', value: 'park'},
-              {title: 'Hiring', value: 'hiring'}
+              {title: 'Closures', value: 'closures'},
+              {title: 'Hiring', value: 'hiring'},
+              {title: 'Promo', value: 'promo'}
             ]
           },
           validation: Rule => Rule.required().error('missing tag(s)')
@@ -78,7 +79,7 @@ export default {
         {
           fieldset: 'settings',
           name: 'mainImage',
-          type: 'image',
+          type: 'bgImage',
           title: 'Cover Image',
           description: 'shown in the news listing, and as a header for the news item\'s page',
           options: {
@@ -105,7 +106,7 @@ export default {
   orderings: [
     {
       name: 'newsDateAsc',
-      title: 'By Menu Date - oldest first',
+      title: 'By Date - oldest first',
       by: [
         {
           field: 'content.date',
@@ -115,7 +116,7 @@ export default {
     },
     {
       name: 'newsDateDesc',
-      title: 'By Menu Date - newest first',
+      title: 'By Date - newest first',
       by: [
         {
           field: 'content.date',

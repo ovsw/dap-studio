@@ -2,13 +2,14 @@ import S from '@sanity/desk-tool/structure-builder'
 import { MdSettings, MdHome } from "react-icons/md";
 import { FaRegNewspaper, FaRegStar, FaFile} from "react-icons/fa";
 import {ImSection} from 'react-icons/im'
+import {MdEvent} from "react-icons/md"
 
 import {pagesByStatusCopy} from "./structure/pagesByStatusCopy"
 import {pagesByStatusImage} from "./structure/pagesByStatusImage"
 import {pagesByStatusImages} from "./structure/pagesByStatusImages"
 
 const hiddenDocTypes = listItem =>
-  !['siteSettings', 'newsItem', 'attraction', 'page', 'reusableSection'].includes(listItem.getId())
+  !['siteSettings', 'newsItem', 'attraction', 'page', 'reusableSection', 'event'].includes(listItem.getId())
 
 export default () =>
   S.list()
@@ -37,6 +38,11 @@ export default () =>
         .schemaType('newsItem')
         .icon(FaRegNewspaper)
         .child(S.documentTypeList('newsItem').title('News Items')),
+      S.listItem()
+        .title('Events')
+        .schemaType('event')
+        .icon(MdEvent)
+        .child(S.documentTypeList('event').title('Events')),
       S.listItem()
         .title('Attractions')
         .schemaType('attraction')

@@ -5,10 +5,11 @@ import createSchema from 'part:@sanity/base/schema-creator'
 import schemaTypes from 'all:part:@sanity/base/schema-type'
 
 // document schemas
+import attraction from './documents/attraction'
+import event from './documents/event'
 import newsItem from './documents/newsItem'
 import page from './documents/page'
 import reusableSection from './documents/reusableSection'
-import attraction from './documents/attraction'
 import siteHome from './documents/siteHome'
 import siteSettings from './documents/siteSettings'
 
@@ -79,6 +80,7 @@ export default createSchema({
     seo,
     // documents
     attraction,
+    event,
     newsItem,
     page,
     reusableSection,

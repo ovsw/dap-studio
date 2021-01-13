@@ -5,7 +5,8 @@ const Icon = () => <Emoji style={{ fontSize: '2rem' }} symbol='📝' />
 const IconEmpty = () => <Emoji style={{ fontSize: '2rem' }} symbol='0️⃣' />
 const IconUpdate = () => <Emoji style={{ fontSize: '2rem' }} symbol='👴' />
 const IconToApprove = () => <Emoji style={{ fontSize: '2rem' }} symbol='👀' />
-const IconApproved = () => <Emoji style={{ fontSize: '2rem' }} symbol='✅' />
+const IconApproved = () => <Emoji style={{ fontSize: '2rem' }} symbol='✔' />
+const IconFInal = () => <Emoji style={{ fontSize: '2rem' }} symbol='✅' />
 
 
 
@@ -53,5 +54,14 @@ export const pagesByStatusCopy = S.listItem()
             .title('Copy Approved:')
             .filter('_type == "page" && content.status.copy == "approved"')
         ),
+      S.listItem()
+        .title('5. Final')
+        .icon(IconFInal)
+        .schemaType('page')
+        .child(
+          S.documentList()
+            .title('Copy Final:')
+            .filter('_type == "page" && content.status.copy == "final"')
+        )
     ])
 )

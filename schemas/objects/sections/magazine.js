@@ -5,7 +5,7 @@ export default {
   name: 'magSection',
   type: 'object',
   liveEdit: true,
-  title: 'Image Section',
+  title: 'Image/Video Section',
   icon: RiLayoutColumnLine,
   fields: [
     {
