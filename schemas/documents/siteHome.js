@@ -3,7 +3,7 @@ import Tabs from "sanity-plugin-tabs"
 export default {
   name: 'siteHome',
   type: 'document',
-  liveEdit: true,
+  liveEdit: false,
   title: 'Home Page',
   __experimental_actions: ['update', 'create', /* 'delete', */ 'publish'],
   fields: [

@@ -18,10 +18,19 @@ export default {
       name: 'faqItems',
       title: 'Questions and Answers:',
       description: 'Note: you can also create headings and drag-and drop them where needed to break up a big list of FAQs.',
-      validation: Rule => Rule.error('Must have at least one FAQ.').required(),
+      validation: Rule => [
+        Rule.error('Must have at least one FAQ.').required(),
+        Rule.error('Duplicate FAQ Item').unique()
+      ],
       type: 'array',
           of: [
             {type: 'faqItem'},
+            {
+              type: 'reference',
+              to: [
+                {type: 'faqItem'}
+              ]
+            },
             {
               title: 'FAQ Category Heading',
               icon: FaHeading,
@@ -36,7 +45,7 @@ export default {
               ]
             }
           ]
-    }
+    },
   ],
   preview: {
     select: {

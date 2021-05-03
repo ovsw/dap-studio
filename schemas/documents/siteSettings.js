@@ -21,7 +21,7 @@ export default {
           title: 'Activate Alert',
           name: 'alertIsActive',
           type: 'boolean',
-          description: 'This controls weather the alert will be shown or not. If toggled enabled, a highlighted message will be displayed at the top of the website, on all pages.'
+          description: 'This controls whether the alert will be shown or not. If toggled enabled, a highlighted message will be displayed at the top of the website, on all pages.'
         },
         {
           fieldset: 'alert',

@@ -47,6 +47,16 @@ export default {
         },
         {
           fieldset: 'main',
+          name: 'endDate',
+          title: 'End Date',
+          type: 'date',
+          description: 'if this event has a duration of more than 1 day, fill in this end date. The above field will act as a start date.',
+          options: {
+            dateFormat: 'dddd MMM Do yyyy',
+          }
+        },
+        {
+          fieldset: 'main',
           name: 'tags',
           title: 'Event Tags',
           type: 'array',
@@ -57,8 +67,10 @@ export default {
             list: [
               {title: 'Food', value: 'food'},
               {title: 'Music', value: 'music'},
+              {title: 'Free', value: 'free'},
               {title: 'Park', value: 'park'}            ]
-          }
+          },
+          validation: Rule => Rule.error('add at least one event tag.').required(),
         },
         {
           fieldset: 'settings',
@@ -85,10 +97,28 @@ export default {
         },
         {
           fieldset: 'main',
-          name: 'body',
-          title: 'Body',
-          type: 'bodyPortableText'
+          name: 'sections',
+          title: 'Content Sections',
+          type: 'array',
+          of: [
+            {type: 'magSection'},
+            {type: 'ctaSection'},
+            {type: 'bigHeading'},
+            {type: 'tableSection'},
+            {type: 'faqSection'},
+            {type: 'cardSection'},
+            {type: 'menuSection'},
+            {type: 'reusedSection'},
+            {type: 'sponsorsSection'},
+            {type: 'fileSection'}
+          ]
         },
+        // {
+        //   fieldset: 'main',
+        //   name: 'body',
+        //   title: 'Body',
+        //   type: 'bodyPortableText'
+        // },
         {
           fieldset: 'seo',
           name: 'seo',
