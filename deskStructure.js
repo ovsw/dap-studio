@@ -130,6 +130,36 @@ export default () =>
         .icon(FaFile)
         .child(S.documentTypeList("page").title("Pages")),
       S.listItem()
+        .title("Special pages")
+        .id("specialPages2")
+        .icon(FaRegFileAlt)
+        .child(
+          S.list()
+            .title("Pages")
+            .items([
+              S.documentListItem()
+                .id("eventsPage")
+                .title("Events Page")
+                .schemaType("pageSpecial"),
+              S.documentListItem()
+                .id("parkNews")
+                .title("Park News Page")
+                .schemaType("pageSpecial"),
+              S.documentListItem()
+                .id("parkRides")
+                .title("Park News Page")
+                .schemaType("pageSpecial"),
+              S.documentListItem()
+                .id("waterParkAttractions")
+                .title("Park News Page")
+                .schemaType("pageSpecial"),
+              S.documentListItem()
+                .id("allergensPage")
+                .title("Allergens Page")
+                .schemaType("allergensPage"),
+            ])
+        ),
+      S.listItem()
         .title("Reusable Sections")
         .icon(ImSection)
         .schemaType("reusableSection")
