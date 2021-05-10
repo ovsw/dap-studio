@@ -58,6 +58,7 @@ const WebPreview = ({ document }) => {
   // get url path prefix for each content type
   const pathPrefixes = {
     page: "",
+    simplePage: "",
     newsItem: "news/",
     event: "events/",
     attraction: "amusement-park-rides/",
@@ -74,15 +75,18 @@ const WebPreview = ({ document }) => {
 //   <h1>JSON Data</h1>
 // );
 
+const pagesWithPreview = [
+  "page",
+  "siteHome",
+  "newsItem",
+  "event",
+  "attraction",
+  "simplePage",
+];
+
 export const getDefaultDocumentNode = ({ schemaType }) => {
   // Only show the iframe for documents for which a preview makes sense.
-  if (
-    schemaType === "page" ||
-    schemaType === "siteHome" ||
-    schemaType === "newsItem" ||
-    schemaType === "event" ||
-    schemaType === "attraction"
-  ) {
+  if (pagesWithPreview.indexOf(schemaType) > -1) {
     return S.document().views([
       // default edit form
       S.view.form().icon(MdEdit),
