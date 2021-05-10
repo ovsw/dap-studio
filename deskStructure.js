@@ -6,6 +6,7 @@ import {
   FaRegStar,
   FaFile,
   FaRegFileAlt,
+  FaQuestionCircle,
 } from "react-icons/fa";
 
 // icons
@@ -21,6 +22,7 @@ import { pagesByStatusImages } from "./structure/pagesByStatusImages";
 // hidden doc types
 const hiddenDocTypes = (listItem) =>
   ![
+    "siteHome",
     "siteSettings",
     "newsItem",
     "attraction",
@@ -109,6 +111,7 @@ export default () =>
             .schemaType("siteSettings")
             .documentId("siteSettings")
         ),
+      S.divider(),
       S.listItem()
         .title("News Items")
         .schemaType("newsItem")
@@ -119,6 +122,7 @@ export default () =>
         .schemaType("event")
         .icon(MdEvent)
         .child(S.documentTypeList("event").title("Events")),
+      S.divider(),
       S.listItem()
         .title("Attractions")
         .schemaType("attraction")
@@ -147,11 +151,11 @@ export default () =>
                 .schemaType("pageSpecial"),
               S.documentListItem()
                 .id("parkRides")
-                .title("Park News Page")
+                .title("Park Rides Page")
                 .schemaType("pageSpecial"),
               S.documentListItem()
                 .id("waterParkAttractions")
-                .title("Park News Page")
+                .title("Water Park Attractions Page")
                 .schemaType("pageSpecial"),
               S.documentListItem()
                 .id("allergensPage")
@@ -166,6 +170,34 @@ export default () =>
         .child(
           S.documentTypeList("reusableSection").title("Reusable Sections")
         ),
+      S.listItem()
+        .title("Simple Pages")
+        .schemaType("simplePage")
+        .icon(FaFile)
+        .child(S.documentTypeList("simplePage").title("Simple Pages")),
+      S.divider(),
+      S.listItem()
+        .title("FAQ Items")
+        .icon(FaQuestionCircle)
+        .schemaType("faqItem")
+        .child(S.documentTypeList("faqItem").title("FAQ Items")),
+      S.listItem()
+        .title("FAQs by Category")
+        .child(
+          S.documentTypeList("faqCategory")
+            .title("FAQs By Category")
+            .child((categoryId) =>
+              S.documentList()
+                .title("FAQs")
+                .filter('_type == "faqItem" && $categoryId in category[]._ref')
+                .params({ categoryId })
+            )
+        ),
+      S.listItem()
+        .title("FAQ Categories")
+        .schemaType("faqCategory")
+        .child(S.documentTypeList("faqCategory").title("FAQ Categories")),
+      S.divider(),
       S.listItem()
         .title("Pages by Content Status")
         .child(
