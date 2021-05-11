@@ -1,57 +1,67 @@
-import React from 'react'
-import Tabs from "sanity-plugin-tabs"
-import {ImSection} from 'react-icons/im'
+import React from "react";
+import Tabs from "sanity-plugin-tabs";
+import { ImSection } from "react-icons/im";
 
 export default {
-  name: 'reusableSection',
-  title: 'Reusable Section',
-  type: 'document',
+  name: "reusableSection",
+  title: "Reusable Section",
+  type: "document",
   icon: ImSection,
   liveEdit: false,
-  __experimental_actions: [ 'create', 'update', 'publish', 'delete' ], /* 'create', 'delete' */
+  __experimental_actions: [
+    "create",
+    "update",
+    "publish",
+    "delete",
+  ] /* 'create', 'delete' */,
   fields: [
     {
-      name: 'title',
-      title: 'Title',
-      type: 'string',
-      description: 'eg: halloween',
-      validation: Rule => Rule.error('Missing Title.').required()
+      name: "title",
+      title: "Title",
+      type: "string",
+      description: "eg: halloween",
+      validation: (Rule) => Rule.error("Missing Title.").required(),
     },
     {
-      name: 'sections',
-      title: 'Content Sections',
-      description: 'a reusable section can be made up of one or more content sections, the same ones used on pages',
-      validation: Rule => Rule.error('Add at least one content section.').required(),
-      type: 'array',
+      name: "sections",
+      title: "Content Sections",
+      description:
+        "a reusable section can be made up of one or more content sections, the same ones used on pages",
+      validation: (Rule) =>
+        Rule.error("Add at least one content section.").required(),
+      type: "array",
       of: [
-        {type: 'magSection'},
-        {type: 'ctaSection'},
-        {type: 'bigHeading'},
-        {type: 'tableSection'},
-        {type: 'faqSection'},
-        {type: 'cardSection'},
-        {type: 'menuSection'},
-        {type: 'sponsorsSection'},
-        {type: 'fileSection'}
-      ]
-    }
+        { type: "magSection" },
+        { type: "ctaSection" },
+        { type: "bigHeading" },
+        { type: "tableSection" },
+        { type: "faqSection" },
+        { type: "cardSection" },
+        { type: "menuSection" },
+        { type: "sponsorsSection" },
+        { type: "fileSection" },
+      ],
+      options: {
+        editModal: "fullscreen",
+      },
+    },
   ],
   orderings: [
     {
-      name: 'createdAt',
-      title: 'Created older->newer',
+      name: "createdAt",
+      title: "Created older->newer",
       by: [
         {
-          field: '_createdAt',
-          direction: 'asc'
-        }
-      ]
-    }
+          field: "_createdAt",
+          direction: "asc",
+        },
+      ],
+    },
   ],
   preview: {
     select: {
-      title: 'title',
-      media: 'icon'
+      title: "title",
+      media: "icon",
     },
-  }
-}
+  },
+};

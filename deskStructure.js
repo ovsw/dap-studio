@@ -168,6 +168,12 @@ export default () =>
             ])
         ),
       S.listItem()
+        .title("Simple Pages")
+        .schemaType("simplePage")
+        .icon(FaFile)
+        .child(S.documentTypeList("simplePage").title("Simple Pages")),
+      S.divider(),
+      S.listItem()
         .title("Reusable Sections")
         .icon(ImSection)
         .schemaType("reusableSection")
@@ -175,10 +181,9 @@ export default () =>
           S.documentTypeList("reusableSection").title("Reusable Sections")
         ),
       S.listItem()
-        .title("Simple Pages")
-        .schemaType("simplePage")
-        .icon(FaFile)
-        .child(S.documentTypeList("simplePage").title("Simple Pages")),
+        .title("Sponsors")
+        .schemaType("sponsor")
+        .child(S.documentTypeList("sponsor").title("Sponsors")),
       S.divider(),
       S.listItem()
         .title("FAQ Items")
