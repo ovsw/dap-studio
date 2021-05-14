@@ -27,18 +27,18 @@ export default {
         { name: "seo", title: "SEO" },
       ],
       fields: [
-        {
-          fieldset: "status",
-          name: "status",
-          type: "pageStatus",
-          title: "Page Status",
-          description:
-            "this is used during development to keep track of the status of this page.",
-          validation: (Rule) =>
-            Rule.error(
-              "You have to fill out the status of the page."
-            ).required(),
-        },
+        // {
+        //   fieldset: "status",
+        //   name: "status",
+        //   type: "pageStatus",
+        //   title: "Page Status",
+        //   description:
+        //     "this is used during development to keep track of the status of this page.",
+        //   validation: (Rule) =>
+        //     Rule.error(
+        //       "You have to fill out the status of the page."
+        //     ).required(),
+        // },
         {
           fieldset: "main",
           name: "title",
@@ -131,35 +131,35 @@ export default {
       title: "content.title",
       slug: "content.slug",
       media: "content.mainImage",
-      statusContent: "content.status.copy",
-      statusImages: "content.status.contentImages",
+      // statusContent: "content.status.copy",
+      // statusImages: "content.status.contentImages",
     },
     prepare({
       title = "No title",
       slug = {},
       media,
-      statusContent,
-      statusImages,
+      // statusContent,
+      // statusImages,
     }) {
       const path = `/${slug.current}/`;
-      const emojisCopy = {
-        empty: "0️⃣",
-        "to update": "👴",
-        "to approve": "👀",
-        approved: "✅",
-      };
-      const emojisImages = {
-        empty: "0️⃣",
-        added: "✅",
-      };
+      // const emojisCopy = {
+      //   empty: "0️⃣",
+      //   "to update": "👴",
+      //   "to approve": "👀",
+      //   approved: "✅",
+      // };
+      // const emojisImages = {
+      //   empty: "0️⃣",
+      //   added: "✅",
+      // };
       return {
         title,
         description: path,
         media: media,
         // description: `copy: ${statusContent}; images: ${statusImages}`
-        subtitle: `copy: ${
-          statusContent ? emojisCopy[statusContent] : "0️⃣"
-        } | images: ${statusImages ? emojisImages[statusImages] : "0️⃣"}`,
+        // subtitle: `copy: ${
+        //   statusContent ? emojisCopy[statusContent] : "0️⃣"
+        // } | images: ${statusImages ? emojisImages[statusImages] : "0️⃣"}`,
       };
     },
   },

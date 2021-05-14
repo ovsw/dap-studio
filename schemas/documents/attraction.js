@@ -153,7 +153,9 @@ export default {
 
       return {
         title,
-        subtitle: `${attractionCategories[0]} - ${attractionCategories[1]}`,
+        subtitle: `${attractionCategories[0]}${
+          attractionCategories[1] ? " - " + attractionCategories[1] : ""
+        }`,
         media: image,
       };
     },

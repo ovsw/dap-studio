@@ -33,7 +33,7 @@ const hiddenDocTypes = (listItem) =>
   ].includes(listItem.getId());
 
 // Web Preview
-const url = "https://dap-web2.netlify.app/";
+const url = "https://www.mydelgrossopark.com/";
 
 const WebPreview = ({ document }) => {
   const { displayed } = document;
@@ -44,7 +44,7 @@ const WebPreview = ({ document }) => {
       //  url for home page
       return (
         <iframe
-          src={`https://dap-web2.netlify.app/?preview=true`}
+          src={`https://www.mydelgrossopark.com/?preview=true`}
           frameBorder={0}
           width="100%"
           height="100%"
@@ -207,14 +207,14 @@ export default () =>
         .schemaType("faqCategory")
         .child(S.documentTypeList("faqCategory").title("FAQ Categories")),
       S.divider(),
-      S.listItem()
-        .title("Pages by Content Status")
-        .child(
-          S.list()
-            .title("Organize by...")
-            .id("contentTypes")
-            .items([pagesByStatusCopy, pagesByStatusImages])
-        ),
+      // S.listItem()
+      //   .title("Pages by Content Status")
+      //   .child(
+      //     S.list()
+      //       .title("Organize by...")
+      //       .id("contentTypes")
+      //       .items([pagesByStatusCopy, pagesByStatusImages])
+      //   ),
 
       // S.listItem()
       //   .title('Projects by category')
