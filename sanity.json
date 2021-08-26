@@ -4,7 +4,7 @@
     "name": "DAP"
   },
   "api": {
-    "projectId": "0un18sqx",
+    "projectId": "zjwbgj71",
     "dataset": "production"
   },
   "plugins": [
@@ -22,9 +22,7 @@
   ],
   "env": {
     "development": {
-      "plugins": [
-        "@sanity/vision"
-      ]
+      "plugins": ["@sanity/vision"]
     }
   },
   "parts": [
@@ -51,6 +49,6 @@
     {
       "implements": "part:@sanity/base/theme/variables/override-style",
       "path": "./styles/variables.css"
-    }    
+    }
   ]
 }
