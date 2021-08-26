@@ -1,14 +1,14 @@
 export default function resolveProductionUrl(document) {
   const slug = document.slug?.current;
 
-  console.log("from resolveProductionUrl, slug:", slug);
+  // console.log("from resolveProductionUrl, slug:", slug);
 
   if (!slug) {
     if (document._type === "siteHome") {
-      console.log("from resolveProductionUrl, no slug, returning home");
+      // console.log("from resolveProductionUrl, no slug, returning home");
       return `https://dap-web2.netlify.app/?preview=true`;
     }
-    console.log("from resolveProductionUrl, no slug, undefined");
+    // console.log("from resolveProductionUrl, no slug, undefined");
     return undefined;
   }
 
