@@ -79,7 +79,8 @@ export default {
           title: 'Allergen Listing',
           type: 'array',
           options: {
-            editModal: 'fullscreen'
+
+            // editModal: 'fullscreen'
           },
           of: [
             {type: 'allergensLocation'},

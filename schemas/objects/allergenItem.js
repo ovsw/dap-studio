@@ -39,6 +39,7 @@ export default {
       description: 'list of allergens for this menu item',
       of: [{type: 'string'}],
       options: {
+        layout: 'grid',
         list: [
           {title: 'Gluten/Wheat', value: 'Gluten/Wheat'},
           {title: 'Dairy', value: 'Dairy'},
