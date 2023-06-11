@@ -48,15 +48,14 @@ export default {
           options: {
             dateFormat: "dddd MMM Do yyyy",
           },
-          validation: (Rule) => Rule.required().error("missing event date"),
+          validation: (Rule) => Rule.required().error("missing event start date"),
         },
         {
           fieldset: "main",
           name: "endDate",
           title: "End Date",
           type: "date",
-          description:
-            "if this event has a duration of more than 1 day, fill in this end date. The above field will act as a start date.",
+          validation: (Rule) => Rule.required().error("missing event end date"),
           options: {
             dateFormat: "dddd MMM Do yyyy",
           },
